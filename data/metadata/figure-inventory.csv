@@ -1,0 +1,18 @@
+figure_id,chapter_id,title,figure_role,data_path,primary_stat_or_rule,required_motion,required_interaction,status
+FIG-01,01,Initiating Weir Diagnostic,explanatory diagnostic,data/metadata/initiating-case.json,no regression; diagnostic sequence,scroll reveal and geometry/uplift highlights,scroll or step controls,FROZEN
+FIG-02,02,Dependency Network,system dependency map,data/metadata/dependency-network.json,no regression; dependency logic,staged edge drawing,input/response path selection,FROZEN
+FIG-03,03,Experiment Scale & Filtering,methodology/scenario scale,data/figures/fig-03-experiment-scale.csv,counts and eligibility shares,progressive point population and filtering,stage/seed filtering,FROZEN
+FIG-04,04,Q × L → Head Surface,analytical hydraulic response,data/figures/fig-04-q-l-head.csv,H=[Q/(C·L)]^(2/3); elasticities ±2/3,surface/heatfield build,hover and Q/L focus,FROZEN
+FIG-05,05,q × Fr1 → Forcing,empirical hydraulic response,data/figures/fig-05-q-fr1-forcing.csv,P'∝q^1.66657·Fr1^1.86849; R²≈0.999865,progressive surface and fitted-model reveal,hover; scale toggle; family filter,FROZEN
+FIG-06,06,Height × Downstream Slope → Body Area,analytical geometry/material response,data/figures/fig-06-height-slope-area.csv,A=P·T+0.5·s·P²; local elasticities,cross-section morph plus response build,hover; family comparison,FROZEN
+FIG-07,07,Stability Conditional Drivers,conditional multivariable response,data/figures/fig-07-stability-drivers.csv,Spearman rho and standardized coefficients,coefficient growth and family transitions,pooled/family and metric toggle,FROZEN
+FIG-08,08,Pareto Trade Space,multiobjective trade-off,data/figures/fig-08-pareto.csv,no trendline; nondominance and robustness,cloud build and dominated-point fade,x/y objective; family; robust-only,FROZEN
+FIG-09,09,Normalized Family Map,normalized regime map,data/figures/fig-09-family-map.csv,percentile envelopes and family shares,neutral cloud to family colour plus section morph,family/seed/transition controls,FROZEN
+FIG-10,09,Family Trade-off Dashboard,regime trade-off summary,data/figures/fig-10-family-tradeoffs.csv,p10/p50/p90 and directional trade-offs,range morph by family,family/metric selection,FROZEN
+FIG-11,09,Family Share Replication,replication evidence,data/figures/fig-11-family-share-seeds.csv,mean share and SD/range,seed points and connecting traces,seed/family hover,FROZEN
+FIG-12,10,Hydraulic Jump / Basin Development Scaling,dissipation-development response,data/figures/fig-12-jump-scaling.csv,analytical/derived jump metrics,jump schematic morph and curve trace,Fr1 slider; metric/family selector,FROZEN
+FIG-13,11,BJ vs DAF Alluvial Scour Comparison,model-form comparison,data/figures/fig-13-bj-daf-comparison.csv,DAF/BJ ratio; agreement shares; rank correlation,scatter reveal then 1:1 and factor bands,family/regime filters and hover,FROZEN
+FIG-14,11,Compact Disagreement Envelope,model-disagreement meta-model,data/figures/fig-14-disagreement-envelope.csv,q10/q50/q90 coverage and calibration statistics,q50 trace then uncertainty-band expansion,family/condition filtering,FROZEN
+FIG-15,12,Global Sobol Sensitivity,global sensitivity,data/figures/fig-15-sobol.csv,S1; ST; ST−S1; scramble replication,animated bars/dumbbells and reordering,response; S1/ST; interaction; replication toggle,FROZEN
+FIG-16,13,Five-Dimension Research Framework,integrated synthesis,data/metadata/five-dimension-framework.json,no regression; five-dimension synthesis,scroll-activated stage assembly,family-linked state selection,FROZEN
+FIG-17,14,Research Explorer,interactive evidence explorer,multiple figure extracts,statistic selected by analytical type,view transition and linked highlighting,response; variables; family; seed; chart mode,FROZEN
