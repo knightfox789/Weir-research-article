@@ -1,6 +1,6 @@
 # Weir Research — Interactive Web Article
 
-**Repository status:** Planning baseline
+**Repository status:** Phase 1 complete — story architecture and figure inventory frozen
 
 This repository will publish the completed small-weir parametric research as a **story-driven, interactive, GitHub Pages web article**.
 
@@ -19,6 +19,22 @@ The publication is not a static research paper copied into HTML and not a field-
 - Every analytical figure has a traceable data source and figure-data contract.
 - Research findings remain clearly separated from field-design recommendations.
 - GitHub Pages-compatible, responsive, accessible and reproducible.
+
+## Build control
+
+The implementation follows a **canonical 13-phase sequence**. Every phase must pass a documented audit before the next phase begins.
+
+The audit checks:
+1. storyline fidelity;
+2. scientific fidelity;
+3. figure/data fidelity;
+4. architecture restraint.
+
+This control exists specifically to prevent storyline drift, unnecessary analysis and unnecessary application architecture.
+
+Current status:
+- **Phase 1 — PASS:** story architecture and 17-figure inventory frozen.
+- **Next:** Phase 2 — figure CSV/data contracts.
 
 ## Design DNA
 
@@ -44,10 +60,14 @@ The Weir Research article will go further by adding data-driven D3 visualisation
 - GitHub Pages deployment
 - No proprietary visual assets, charting systems or McKinsey code/assets
 
-## Planning documents
+## Planning and control documents
 
 - [`docs/WEB_ARTICLE_MASTER_PLAN.md`](docs/WEB_ARTICLE_MASTER_PLAN.md)
 - [`docs/FIGURE_DATA_AND_MOTION_SPEC.md`](docs/FIGURE_DATA_AND_MOTION_SPEC.md)
+- [`docs/CONTROLLED_BUILD_SEQUENCE_AND_AUDIT_PROTOCOL.md`](docs/CONTROLLED_BUILD_SEQUENCE_AND_AUDIT_PROTOCOL.md)
+- [`docs/PHASE_01_STORY_AND_FIGURE_FREEZE.md`](docs/PHASE_01_STORY_AND_FIGURE_FREEZE.md)
+- [`docs/audits/PHASE_01_AUDIT.md`](docs/audits/PHASE_01_AUDIT.md)
+- [`data/metadata/figure-inventory.csv`](data/metadata/figure-inventory.csv)
 
 ## Research boundary
 
