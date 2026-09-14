@@ -1,0 +1,35 @@
+check,status,detail
+FIG03 original total,PASS,"classification counts sum to 50,000"
+FIG03 pooled eligible,PASS,"eligible counts sum to 10,317"
+FIG05 display eligible source,PASS,900 deterministic display rows from original eligible set
+FIG08 Pareto members,PASS,all 101 original nondominated cases retained in reduced cloud
+FIG09 family counts,PASS,"{'F4': 1273, 'F3': 799, 'F2': 373, 'F1': 140}"
+FIG11 four seeds,PASS,four independent seeds present
+FIG12 formal domain,PASS,"22,500 formal-jump states source"
+FIG13 full overlap,PASS,"14,369 common BJ/DAF states"
+FIG13 median ratio,PASS,median=1.1068216109
+FIG13 factor2,PASS,factor2=0.50302735
+FIG13 spearman,PASS,rho=0.4223858885
+FIG14 full coverage,PASS,coverage=0.8006820238
+FIG15 response count,PASS,responses=6
+FIG13 display median fidelity,PASS,"display=1.1076, full=1.1068"
+FIG13 display factor2 fidelity,PASS,"display=0.5008, full=0.5030"
+FIG13 display rho fidelity,PASS,"display=0.4362, full=0.4224"
+FIG-01 data path data/metadata/initiating-case.json,PASS,exists
+FIG-02 data path data/metadata/dependency-network.json,PASS,exists
+FIG-03 data path data/figures/fig-03-experiment-scale.csv,PASS,exists
+FIG-04 data path data/figures/fig-04-q-l-head.csv,PASS,exists
+FIG-05 data path data/figures/fig-05-q-fr1-forcing.csv,PASS,exists
+FIG-06 data path data/figures/fig-06-height-slope-area.csv,PASS,exists
+FIG-07 data path data/figures/fig-07-stability-drivers.csv,PASS,exists
+FIG-08 data path data/figures/fig-08-pareto.csv,PASS,exists
+FIG-09 data path data/figures/fig-09-family-map.csv,PASS,exists
+FIG-09 data path data/figures/fig-09-family-envelopes.csv,PASS,exists
+FIG-10 data path data/figures/fig-10-family-tradeoffs.csv,PASS,exists
+FIG-11 data path data/figures/fig-11-family-share-seeds.csv,PASS,exists
+FIG-12 data path data/figures/fig-12-jump-scaling.csv,PASS,exists
+FIG-13 data path data/figures/fig-13-bj-daf-comparison.csv,PASS,exists
+FIG-14 data path data/figures/fig-14-disagreement-envelope.csv,PASS,exists
+FIG-15 data path data/figures/fig-15-sobol.csv,PASS,exists
+FIG-16 data path data/metadata/five-dimension-framework.json,PASS,exists
+FIG-17 data path data/metadata/research-explorer.json,PASS,exists
