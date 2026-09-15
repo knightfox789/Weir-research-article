@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Really Controls a Small Weir? | Kaushal Gadariya</title>
+  <meta name="description" content="An interactive research article exploring which variables govern small-weir behaviour, under what conditions, and by how much.">
+  <meta name="author" content="Kaushal Gadariya">
+  <meta name="theme-color" content="#0B1F33">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://knightfox789.github.io/Weir-research-article/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Really Controls a Small Weir?">
+  <meta property="og:description" content="A story-driven interactive research article on hydraulic response, material and stability trade-offs, normalized regimes, and foundation/scour uncertainty.">
+  <meta property="og:url" content="https://knightfox789.github.io/Weir-research-article/">
+  <meta property="og:site_name" content="Kaushal Gadariya â€” Research Articles">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What Really Controls a Small Weir?">
+  <meta name="twitter:description" content="Interactive evidence on the variables, trade-offs and uncertainty that govern small-weir behaviour.">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to article</a>
+
+  <header class="site-header" data-site-header>
+    <div class="site-header__row shell-wide">
+      <a class="site-brand" href="#top" aria-label="Back to article top">
+        <span class="site-brand__mark" aria-hidden="true">W</span>
+        <span class="site-brand__text">Weir Research</span>
+      </a>
+      <nav class="site-header__links" aria-label="Primary">
+        <a href="#chapter-03">Research</a>
+        <a href="#chapter-13">Synthesis</a>
+        <a href="#chapter-14">Explorer</a>
+        <a href="#chapter-16">Methods</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="chapter-nav" data-menu-button>
+        <span>Chapters</span>
+        <span class="menu-button__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="reading-progress" aria-hidden="true">
+      <div class="reading-progress__bar" data-progress-bar></div>
+    </div>
+  </header>
+
+  <aside class="chapter-drawer" id="chapter-nav" aria-label="Article chapters" data-chapter-drawer>
+    <div class="chapter-drawer__inner shell-wide">
+      <p class="eyebrow">Reader journey</p>
+      <ol class="chapter-list">
+        <li><a href="#chapter-00">What really controls a small weir?</a></li>
+        <li><a href="#chapter-01">The simple section that was not simple</a></li>
+        <li><a href="#chapter-02">One change travels through the whole system</a></li>
+        <li><a href="#chapter-03">From one section to 200,000 experiments</a></li>
+        <li><a href="#chapter-04">Head is a balance, not a single driver</a></li>
+        <li><a href="#chapter-05">Forcing rises faster than it first appears</a></li>
+        <li><a href="#chapter-06">Why height quickly becomes a material penalty</a></li>
+        <li><a href="#chapter-07">Stability does not follow one simple rule</a></li>
+        <li><a href="#chapter-08">There is no single optimum weir</a></li>
+        <li><a href="#chapter-09">Four patterns recur â€” but only three form clear cores</a></li>
+        <li><a href="#chapter-10">High forcing does not automatically mean greater jump-development demand</a></li>
+        <li><a href="#chapter-11">Scour is where the models begin to disagree</a></li>
+        <li><a href="#chapter-12">When everything varies together, what matters most?</a></li>
+        <li><a href="#chapter-13">Putting the whole system back together</a></li>
+        <li><a href="#chapter-14">Explore the evidence yourself</a></li>
+        <li><a href="#chapter-15">What this research can â€” and cannot â€” say</a></li>
+        <li><a href="#chapter-16">Methods, data, references and author</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__grid shell-wide">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Interactive research article Â· Small-weir parametric study</p>
+          <h1 id="hero-title">What really controls a small weir?</h1>
+          <p class="hero__dek">A weir can look like a simple section across a stream. The research becomes more interesting when one change begins to move head, unit discharge, jump behaviour, material demand, stability and foundation response at the same time.</p>
+          <div class="hero__meta" aria-label="Article metadata">
+            <span>Kaushal Gadariya</span>
+            <span>Soil and Water Conservation Engineer</span>
+            <span>21 source figures â†’ 17 live web experiences</span>
+          </div>
+          <a class="hero__cta" href="#chapter-01">Follow the investigation <span aria-hidden="true">â†“</span></a>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Illustrative small-weir schematic. The analytical animation will be implemented in a later phase.">
+          <svg viewBox="0 0 760 460" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="water-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#52C7D9" stop-opacity="0.7" />
+                <stop offset="1" stop-color="#117B7B" stop-opacity="0.18" />
+              </linearGradient>
+            </defs>
+            <path class="hero-visual__terrain" d="M20 330 C150 310 230 330 320 330 L360 330 L405 250 L500 250 L545 330 L740 330 L740 420 L20 420 Z"/>
+            <path class="hero-visual__weir" d="M330 330 L405 250 L500 250 L545 330 Z"/>
+            <path class="hero-visual__water" d="M20 205 L405 205 L405 250 L500 250 C545 255 575 276 600 303 C625 327 670 330 740 330 L740 420 L20 420 Z"/>
+            <path class="hero-visual__flowline" d="M42 205 C170 205 290 205 405 205 C470 205 505 228 540 260 C585 301 630 317 718 317"/>
+            <line class="hero-visual__datum" x1="405" y1="205" x2="405" y2="250"/>
+            <text x="418" y="226">head H</text>
+            <text x="82" y="186">Q</text>
+            <text x="453" y="238">L</text>
+            <text x="594" y="292">jump / tailwater</text>
+            <text x="465" y="377">foundation</text>
+          </svg>
+          <p class="hero-visual__note">Illustrative opening schematic. Data-driven motion starts in Phase 4.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-intro shell-reading" id="chapter-00" data-chapter>
+      <p class="chapter-number">00</p>
+      <h2>A small weir looks simple. Its dependencies are not.</h2>
+      <p class="lede">The article follows the research as a sequence of questions. Each live figure will reveal evidence first, then explain what that evidence means and what it does not establish.</p>
+      <div class="boundary-note" role="note">
+        <strong>Research boundary.</strong> This is a synthetic research article, not a design calculator or construction guide. Final field design still requires site-specific hydrology, foundation evidence, applicable standards and professional engineering review.
+      </div>
+    </²È="25Á…É¥Í½¹Ìƒ
+ÜA¡…Í”€Ôð½Àøð½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ðˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÄˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÄµ™…µ¥±äµÉ•Á±¥…Ñ¥½¸¹©Í½¸ˆøñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÄð½ÍÁ…¸øñÍÑÉ½¹œù…µ¥±äM¡…É”I•Á±¥…Ñ¥½¸ð½ÍÑÉ½¹œøñÀù½ÕÈµÍ••½ÕÁ…¹äÍÑ…‰¥±¥Ñäƒ
+ÜA¡…Í”€Ôð½Àøð½‘¥Øø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•È¡…ÁÑ•È´µÍÁ±¥ÐÍ¡•±°µÝ¥‘”ˆ¥ô‰¡…ÁÑ•È´ÄÀˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰¡…ÁÑ•É}}½Áäˆø(€€€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄÀð½Àø(€€€€€€€€ñ Èù!¥ ™½É¥¹œ‘½•Ì¹½Ð…ÕÑ½µ…Ñ¥…±±äµ•…¸É•…Ñ•È©ÕµÀµ‘•Ù•±½Áµ•¹Ð‘•µ…¹ð½ Èø(€€€€€€€€ñÀùU¹¥Ð‘¥Í¡…É”ÍÑÉ½¹±ä…™™•ÑÌ™½É¥¹œµ…¹¥ÑÕ‘”°Ý¡¥±”É½Õ‘”¹Õµ‰•ÈÍÑÉ½¹±ä½¹ÑÉ½±Ì¹½Éµ…±¥é•¡å‘É…Õ±¥Œµ©ÕµÀ‘•Ù•±½Áµ•¹Ð¸Q¡”ÑÝ¼…á•Ì…É”É•±…Ñ•°‰ÕÐÑ¡•ä…É”¹½Ð¥¹Ñ•É¡…¹•…‰±”¸ð½Àø(€€€€€€ð½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ðˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÈˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÈµ¡å‘É…Õ±¥Œµ©ÕµÀ¹©Í½¸ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÈð½ÍÁ…¸ø(€€€€€€€€ñÍÑÉ½¹œù!å‘É…Õ±¥Œ)ÕµÀ€¼	…Í¥¸•Ù•±½Áµ•¹ÐM…±¥¹œð½ÍÑÉ½¹œø(€€€€€€€€ñÀù1¥¹­•Í¡•µ…Ñ¥Œ…¹É•™•É•¹”Í…±¥¹œƒ
+ÜA¡…Í”€Øð½Àø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•ÈÍ¡•±°µÝ¥‘”¡…ÁÑ•È´µ™½Õ¹‘…Ñ¥½¸ˆ¥ô‰¡…ÁÑ•È´ÄÄˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰¡…ÁÑ•É}}½Áä¡…ÁÑ•É}}½Áä´µÉ•…‘¥¹œˆø(€€€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄÄð½Àø(€€€€€€€€ñ ÈùM½ÕÈ¥ÌÝ¡•É”Ñ¡”µ½‘•±Ì‰•¥¸Ñ¼‘¥Í…É•”ð½ Èø(€€€€€€€€ñÀù	½Éµ…¹»ŠM)Õ±¥•¸€¡	(¤…¹Še½ÍÑ¥¹¿ŠM•ÉÉ¼€¡¤‘¼¹½Ð…±¥¸½¹Í¥ÍÑ•¹Ñ±ä…É½ÍÌÑ¡•¥È½µµ½¸Íå¹Ñ¡•Ñ¥Œ½µÁ…É¥Í½¸ÍÁ…”¸Q¡…Ð‘¥Í…É••µ•¹Ð¥ÌÍÑÉÕÑÕÉ•“ŠQ…¹Í¡½Õ±É•µ…¥¸Ù¥Í¥‰±”É…Ñ¡•ÈÑ¡…¸‰•¥¹œ…Ù•É…•…Ý…ä¸ð½Àø(€€€€€€ð½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µÉ¥™¥ÕÉ”µÉ¥´µÑÝ¼ˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ðˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÌˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÌµ…±±ÕÙ¥…°µµ½‘•°µ½µÁ…É¥Í½¸¹©Í½¸ˆøñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÌð½ÍÁ…¸øñÍÑÉ½¹œù	(ÙÌ±±ÕÙ¥…°½µÁ…É¥Í½¸ð½ÍÑÉ½¹œøñÀù5½‘•°…É••µ•¹Ð…¹™…Ñ½È‰…¹‘Ìƒ
+ÜA¡…Í”€Üð½Àøð½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ðˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÐˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÐµ‘¥Í…É••µ•¹Ðµ•¹Ù•±½Á”¹©Í½¸ˆøñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÐð½ÍÁ…¸øñÍÑÉ½¹œù½µÁ…Ð¥Í…É••µ•¹Ð¹Ù•±½Á”ð½ÍÑÉ½¹œøñÀù…±¥‰É…Ñ•Õ¹•ÉÑ…¥¹Ñä•áÁ…¹Í¥½¸ƒ
+ÜA¡…Í”€Üð½Àøð½‘¥Øø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•È¡…ÁÑ•È´µÍÁ±¥ÐÍ¡•±°µÝ¥‘”ˆ¥ô‰¡…ÁÑ•È´ÄÈˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰¡…ÁÑ•É}}½Áäˆø(€€€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄÈð½Àø(€€€€€€€€ñ Èù]¡•¸•Ù•ÉåÑ¡¥¹œÙ…É¥•ÌÑ½•Ñ¡•È°Ý¡…Ðµ…ÑÑ•ÉÌµ½ÍÐüð½ Èø(€€€€€€€€ñÀù±½‰…°Í•¹Í¥Ñ¥Ù¥Ñä…Í­Ì„‘¥™™•É•¹ÐÅÕ•ÍÑ¥½¸™É½´½ÉÉ•±…Ñ¥½¸¸M½‰½°€ñ•´ùLÄð½•´ø…ÁÑÕÉ•Ì„Ù…É¥…‰±”Ì™¥ÉÍÐµ½É‘•È½¹ÑÉ¥‰ÕÑ¥½¸ì€ñ•´ùMPð½•´ø¥¹±Õ‘•Ì¥ÑÌ¥¹Ñ•É…Ñ¥½¹ÌÝ¥Ñ Ñ¡”É•ÍÐ½˜Ñ¡”ÍåÍÑ•´¸ð½Àø(€€€€€€ð½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ðˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÔˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÔµ±½‰…°µÍ•¹Í¥Ñ¥Ù¥Ñä¹©Í½¸ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÔð½ÍÁ…¸ø(€€€€€€€€ñÍÑÉ½¹œù±½‰…°M½‰½°M•¹Í¥Ñ¥Ù¥Ñäð½ÍÑÉ½¹œø(€€€€€€€€ñÀùLÄ€¼MPÉ…¹­¥¹œ…¹¥¹Ñ•É…Ñ¥½¸Ù¥•Üƒ
+ÜA¡…Í”€àð½Àø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•È¡…ÁÑ•È´µÍå¹Ñ¡•Í¥Ìˆ¥ô‰¡…ÁÑ•È´ÄÌˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰Í¡•±°µÉ•…‘¥¹œˆø(€€€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•È¡…ÁÑ•Èµ¹Õµ‰•È´µ±¥¡ÐˆøÄÌð½Àø(€€€€€€€€ñ ÈùAÕÑÑ¥¹œÑ¡”Ý¡½±”ÍåÍÑ•´‰…¬Ñ½•Ñ¡•Èð½ Èø(€€€€€€€€ñÀ±…ÍÌô‰±•‘”ˆùQ¡”É•Í•…É É•Í½±Ù•Ì¥¹Ñ¼™¥Ù”½¹¹•Ñ•‘¥µ•¹Í¥½¹ÌÉ…Ñ¡•ÈÑ¡…¸½¹”Í½É”è¹½Éµ…±¥é•É•¥µ”°É•ÍÁ½¹Í”µ…¹¥ÑÕ‘”°‘¥ÍÍ¥Á…Ñ¥½¸µ‘•Ù•±½Áµ•¹Ð‘•µ…¹°µ…Ñ•É¥…°½ÍÑ…‰¥±¥ÑäÑÉ…‘”µ½™˜°…¹™½Õ¹‘…Ñ¥½¸½Í½ÕÈÕ¹•ÉÑ…¥¹Ñä¸ð½Àø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ð™¥ÕÉ”µµ½Õ¹Ð´µ‘…É¬ˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄØˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄØµ™¥Ù”µ‘¥µ•¹Í¥½¹Ì¹©Í½¸ˆø(€€€€€€€€€€ñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄØð½ÍÁ…¸ø(€€€€€€€€€€ñÍÑÉ½¹œù¥Ù”µ¥µ•¹Í¥½¸I•Í•…É É…µ•Ý½É¬ð½ÍÑÉ½¹œø(€€€€€€€€€€ñÀùMÉ½±±åÑ•±±¥¹œÍå¹Ñ¡•Í¥Ìƒ
+ÜA¡…Í”€àð½Àø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•ÈÍ¡•±°µÉ•…‘¥¹œˆ¥ô‰¡…ÁÑ•È´ÄÐˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄÐð½Àø(€€€€€€ñ ÈùáÁ±½É”Ñ¡”•Ù¥‘•¹”å½ÕÉÍ•±˜ð½ Èø(€€€€€€ñÀ±…ÍÌô‰±•‘”ˆùQ¡”I•Í•…É áÁ±½É•ÈÝ¥±°±•ÐÉ•…‘•ÉÌÉ•Ù¥Í¥Ð™É½é•¸™¥¹‘¥¹Ì‰äÉ•ÍÁ½¹Í”°Ù…É¥…‰±”…¹É•¥µ”Ý¥Ñ¡½ÕÐÉ•…Ñ¥¹œ¹•ÜÍ¥•¹Ñ¥™¥Œ±…¥µÌ½ÈÉ•ÑÕÉ¹¥¹œ½¹ÍÑÉÕÑ¥½¸µÉ•…‘ä‘¥µ•¹Í¥½¹Ì¸ð½Àø(€€€€€€ñ‘¥Ø±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ð™¥ÕÉ”µµ½Õ¹Ð´µÝ¥‘”ˆ‘…Ñ„µ™¥ÕÉ”µ¥ô‰%´ÄÜˆ‘…Ñ„µÉÕ¹Ñ¥µ”ô‰‘…Ñ„½ÉÕ¹Ñ¥µ”½™¥œ´ÄÜµÉ•Í•…É µ•áÁ±½É•È¹©Í½¸ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™¥ÕÉ”µµ½Õ¹Ñ}}¥ˆù%´ÄÜð½ÍÁ…¸ø(€€€€€€€€ñÍÑÉ½¹œùI•Í•…É áÁ±½É•Èð½ÍÑÉ½¹œø(€€€€€€€€ñÀù½½É‘¥¹…Ñ••áÁ±½É…Ñ¥½¸½˜É•±•…Í••Ù¥‘•¹”ƒ
+ÜA¡…Í”€äð½Àø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•ÈÍ¡•±°µÉ•…‘¥¹œˆ¥ô‰¡…ÁÑ•È´ÄÔˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄÔð½Àø(€€€€€€ñ Èù]¡…ÐÑ¡¥ÌÉ•Í•…É …¸ƒŠP…¹…¹¹½ÐƒŠPÍ…äð½ Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰‰½Õ¹‘…ÉäµÉ¥ˆø(€€€€€€€€ñ‘¥Øø(€€€€€€€€€€ñ Ìù]¡…Ð¥Ð•ÍÑ…‰±¥Í¡•Ìð½ Ìø(€€€€€€€€€€ñÀù!½ÜÉ•ÍÁ½¹Í•ÌÙ…Éä…É½ÍÌÑ¡”™É½é•¸Íå¹Ñ¡•Ñ¥ŒÉ•Í•…É ÍÁ…”ìÝ¡•É”ÑÉ…‘”µ½™™ÌÉ•ÕÈì¡½Ü¹½Éµ…±¥é•É•¥µ•Ì‰•¡…Ù”ì…¹Ý¡•É”µ½‘•°‘¥Í…É••µ•¹ÐÉ•µ…¥¹Ìµ…Ñ•É¥…°¸ð½Àø(€€€€€€€€ð½‘¥Øø(€€€€€€€€ñ‘¥Øø(€€€€€€€€€€ñ Ìù]¡…Ð¥Ð‘½•Ì¹½Ð•ÍÑ…‰±¥Í ð½ Ìø(€€€€€€€€€€ñÀùM¥Ñ”Ù…±¥‘…Ñ¥½¸°„½¹ÍÑÉÕÑ¥½¸É•½µµ•¹‘…Ñ¥½¸°™¥¹…°%L€ÐääÜèÈÀÈØ‰…Í¥¸‘¥µ•¹Í¥½¹Ì°½È„Õ¹¥Ù•ÉÍ…°™½Õ¹‘…Ñ¥½¸½Í½ÕÈ‘•Í¥¸µ•Ñ¡½¸ð½Àø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø((€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡…ÁÑ•È¡…ÁÑ•È´µµ•Ñ¡½‘Ìˆ¥ô‰¡…ÁÑ•È´ÄØˆ‘…Ñ„µ¡…ÁÑ•Èø(€€€€€€ñ‘¥Ø±…ÍÌô‰Í¡•±°µÝ¥‘”µ•Ñ¡½‘ÌµÉ¥ˆø(€€€€€€€€ñ‘¥Øø(€€€€€€€€€€ñÀ±…ÍÌô‰¡…ÁÑ•Èµ¹Õµ‰•ÈˆøÄØð½Àø(€€€€€€€€€€ñ Èù5•Ñ¡½‘Ì°‘…Ñ„°É•™•É•¹•Ì…¹…ÕÑ¡½Èð½ Èø(€€€€€€€€€€ñÀùQ¡”ÁÕ‰±¥…Ñ¥½¸­••ÁÌÑ¡”…¹…±åÑ¥…°±¥¹•…”Ù¥Í¥‰±”Ý¥Ñ¡½ÕÐÑÕÉ¹¥¹œÑ¡”ÁÕ‰±¥ŒÍ¥Ñ”¥¹Ñ¼„É…Üµ‘…Ñ„‘½Ý¹±½…ÁÉ½‘ÕÐ¸ð½Àø(€€€€€€€€€€ñ‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñÍÕµµ…Éäù5•Ñ¡½‘Ì…¹É•ÁÉ½‘Õ¥‰¥±¥Ñäð½ÍÕµµ…Éäø(€€€€€€€€€€€€ñÀùA¡…Í”€ÈÉ•½É‘ÌÍ½ÕÉ”¥‘•¹Ñ¥Ñä°Á½ÁÕ±…Ñ¥½¸½™¥±Ñ•ÈÉÕ±•Ì°•ÅÕ…Ñ¥½¹Ì°™É½é•¸ÍÑ…Ñ¥ÍÑ¥Ì°‘•Ñ•Éµ¥¹¥ÍÑ¥Œ‘¥ÍÁ±…äÉ•‘ÕÑ¥½¹Ì…¹ÉÕ¹Ñ¥µ”…ÍÍ•Ð¡…Í¡•Ì™½È…±°€ÄÜÝ•ˆ™¥ÕÉ•Ì¸ð½Àø(€€€€€€€€€€ð½‘•Ñ…¥±Ìø(€€€€€€€€€€ñ‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñÍÕµµ…ÉäùAÕ‰±¥…Ñ¥½¸‘…Ñ„‰½Õ¹‘…Éäð½ÍÕµµ…Éäø(€€€€€€€€€€€€ñÀùÕÑ¡½É¥Ñ…Ñ¥Ù”É•Í•…É MYÌÉ•µ…¥¸‰Õ¥±¥¹ÁÕÑÌ¸Q¡”ÍÑ…Ñ¥ŒÍ¥Ñ”ÕÍ•Ì½µÁ…ÐÉ•¹‘•ÈµÉ•…‘ä)M=8™½È•ÅÕ…Ñ¥½¹Ì°ÍÕµµ…É¥•Ì…¹‘•Ñ•Éµ¥¹¥ÍÑ¥Œ‘¥ÍÁ±…äÍ…µÁ±•Ì¹••‘•‰ä±¥Ù”™¥ÕÉ•Ì¸ð½Àø(€€€€€€€€€€ð½‘•Ñ…¥±Ìø(€€€€€€€€€€ñ‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñÍÕµµ…ÉäùM¥•¹Ñ¥™¥Œ‰½Õ¹‘…Éäð½ÍÕµµ…Éäø(€€€€€€€€€€€€ñÀùá…Ð±…ÝÌ°™¥ÑÑ•É•±…Ñ¥½¹Í¡¥ÁÌ°É…¹¬•Ù¥‘•¹”°M½‰½°Í•¹Í¥Ñ¥Ù¥Ñä°™Õééä™…µ¥±¥•Ì…¹µ½‘•°µ™½É´Õ¹•ÉÑ…¥¹ÑäÉ•µ…¥¸Ù¥Í¥‰±ä‘¥ÍÑ¥¹Õ¥Í¡•Ñ¡É½Õ¡½ÕÐÑ¡”…ÉÑ¥±”¸ð½Àø(€€€€€€€€€€ð½‘•Ñ…¥±Ìø(€€€€€€€€ð½‘¥Øø((€€€€€€€€ñ…Í¥‘”±…ÍÌô‰…ÕÑ¡½Èµ…Éˆ…É¥„µ±…‰•°ô‰ÕÑ¡½Èˆø(€€€€€€€€€€ñÀ±…ÍÌô‰•å•‰É½Ü•å•‰É½Ü´µ±¥¡ÐˆùÕÑ¡½Èð½Àø(€€€€€€€€€€ñ Ìù-…ÕÍ¡…°…‘…É¥å„ð½ Ìø(€€€€€€€€€€ñÀùM½¥°…¹]…Ñ•È½¹Í•ÉÙ…Ñ¥½¸¹¥¹••Èð½Àø(€€€€€€€€€€ñÀ±…ÍÌô‰…ÕÑ¡½Èµ…É‘}}‰¥¼ˆù]½É­¥¹œ…ÐÑ¡”¥¹Ñ•ÉÍ•Ñ¥½¸½˜Ý…Ñ•ÈÉ•Í½ÕÉ•Ì°™¥•±¥µÁ±•µ•¹Ñ…Ñ¥½¸°‘…Ñ„…¹…±åÍ¥Ì…¹ÁÉ…Ñ¥…°É•Í•…É ½µµÕ¹¥…Ñ¥½¸¸ð½Àø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ÕÑ¡½Èµ…É‘}}±¥¹­Ìˆø(€€€€€€€€€€€€ñ„¡É•˜ô‰¡ÑÑÁÌè¼½ÝÝÜ¹±¥¹­•‘¥¸¹½´½¥¸½­…ÕÍ¡…°µ…‘…É¥å„´ØÜÀÈÈÅˆÄ¼ˆÉ•°ô‰µ”¹½½Á•¹•Èˆù1¥¹­•‘%¸ð½„ø(€€€€€€€€€€€€ñ„¡É•˜ô‰¡ÑÑÁÌè¼½­¹¥¡Ñ™½àÜàä¹¥Ñ¡Õˆ¹¥¼½­…ÕÍ¡…°µ…‘…É¥å„µÁ½ÉÑ™½±¥¼¼ˆÉ•°ô‰µ”¹½½Á•¹•ÈˆùA½ÉÑ™½±¥¼ð½„ø(€€€€€€€€€€€€ñ„¡É•˜ô‰¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½­¹¥¡Ñ™½àÜàä½]•¥ÈµÉ•Í•…É µ…ÉÑ¥±”ˆÉ•°ô‰¹½½Á•¹•Èˆù¥Ñ!ÕˆÉ•Á½Í¥Ñ½Éäð½„ø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½…Í¥‘”ø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø(€€ð½µ…¥¸ø((€€ñ™½½Ñ•È±…ÍÌô‰Í¥Ñ”µ™½½Ñ•Èˆø(€€€€ñ‘¥Ø±…ÍÌô‰Í¡•±°µÝ¥‘”Í¥Ñ”µ™½½Ñ•É}}É½Üˆø(€€€€€€ñÀù]•¥ÈI•Í•…É ƒ
+Ü%¹Ñ•É…Ñ¥Ù”ÁÕ‰±¥…Ñ¥½¸Í¡•±°ð½Àø(€€€€€€ñÀùA¡…Í”€Ìƒ
+Ü¹…±åÑ¥…°™¥ÕÉ•Ì‰•¥¸¥¸A¡…Í”€Ðð½Àø(€€€€ð½‘¥Øø(€€ð½™½½Ñ•Èø(ð½‰½‘äø(ð½¡Ñµ°ø(

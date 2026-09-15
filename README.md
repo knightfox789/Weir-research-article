@@ -1,6 +1,6 @@
 # Weir Research — Interactive Web Article
 
-**Repository status:** Phase 2 complete — analytical lineage, runtime data contracts and integrity audit PASS
+**Repository status:** Phase 3 complete — editorial shell, branding and responsive framework PASS
 
 This repository publishes the completed small-weir parametric research as a **story-driven, interactive, GitHub Pages web article**.
 
@@ -12,13 +12,12 @@ The publication is not a static research paper copied into HTML and not a field-
 
 - Reader-first storyline rather than conventional paper sequencing.
 - Evidence-first writing in Kaushal Gadariya's professional voice.
-- Live analytical figures rendered in the browser with animation, motion, hover, filtering and linked highlighting.
-- **No PNG/JPG research charts used as analytical figures.**
+- **21 original research figures remain the scientific evidence inventory; related evidence is consolidated into 17 live web experiences.**
+- Live analytical figures will render in the browser with purposeful motion, hover, filtering and linked highlighting.
+- **No PNG/JPG research charts are used as analytical runtime figures.**
 - **No user-facing analytical CSV download layer.** Authoritative research CSVs remain build inputs and are not published as convenient public datasets.
 - Public runtime assets contain only the equations, summaries, calibration tables and deterministic display reductions needed to render each visualization.
-- Motion is purposeful: progressive reveal, state transitions, response-surface morphing, uncertainty expansion, Pareto fading, family transitions, Sobol reordering and scroll-driven explanation.
 - Equations, regression statistics, sensitivity indices and uncertainty bands are shown only where scientifically appropriate.
-- Every analytical figure has traceable analytical lineage and a figure-data contract.
 - Research findings remain clearly separated from field-design recommendations.
 - GitHub Pages-compatible, responsive, accessible and reproducible.
 
@@ -30,9 +29,21 @@ Because GitHub Pages runs entirely in the browser, values required for a live in
 The implementation follows the controlled phase sequence documented in `docs/CONTROLLED_BUILD_SEQUENCE_AND_AUDIT_PROTOCOL.md`. Every phase must pass storyline fidelity, scientific fidelity, figure/data fidelity and architecture-restraint audits before the next phase begins.
 
 Current status:
-- **Phase 1 — PASS:** story architecture and 17 web-figure roles frozen.
+- **Phase 1 — PASS:** story architecture editorially refined with DSC Humanizer / Kaushal Voice; jargon and repetition controls added; 21-original → 17-live-web figure architecture clarified.
 - **Phase 2 — PASS:** all 21 original analytical figures have source/method lineage; all 17 web figures have complete data/interactivity contracts; compact runtime JSON exists for FIG-03–FIG-17; the corrected scientific audit passes 24/24 frozen-result checks.
-- **Phase 3 — not started in this repository state.**
+- **Phase 3 — PASS:** semantic HTML shell, responsive design system, hero, chapter navigation, reading progress, all 17 figure mount points, author/provenance surfaces, accessibility foundations and SEO/social metadata are implemented.
+- **Phase 4 — next:** opening scrollytelling and live implementation of FIG-01 through FIG-06.
+
+## Phase 3 shell
+
+Phase 3 intentionally stops before analytical chart implementation.
+
+- `index.html` — final-form article structure and all 17 figure mount points.
+- `assets/css/styles.css` — palette, typography, editorial grid, responsive layouts and reduced-motion base.
+- `assets/js/app.js` — chapter drawer, reading progress and active-chapter navigation only.
+- `docs/audits/PHASE_03_AUDIT.md` — Phase 3 four-gate audit.
+
+Each figure mount declares its frozen `FIG-xx` identifier and current Phase 2 runtime JSON path. Chart modules are added only in the later controlled phases.
 
 ## Phase 2 provenance
 
@@ -47,27 +58,29 @@ Current status:
 
 ## Design DNA
 
-The visual language builds on Kaushal Gadariya's existing `GIS-Recharge-Web-Article-V2` publication:
+The visual language builds on Kaushal Gadariya's existing web-publication direction:
 
 - editorial hero and long-form reading rhythm;
 - paper + dark-navy base palette;
 - teal/aqua analytical accents;
 - coral for trade-offs / high response;
+- sand/earth for foundation and scour;
 - restrained serif display typography with clean sans-serif body text;
-- sticky progressive storytelling;
+- sticky reading progress and progressive storytelling;
 - dark author card with LinkedIn and portfolio links.
 
-The Weir Research article extends this with animated data-driven visualization, linked interactions, a research explorer and figure-level provenance.
+No proprietary fonts, assets or code are used.
 
-## Planned technology
+## Technology
 
-- HTML5 + modern CSS
-- Vanilla JavaScript modules
-- D3.js for custom analytical SVG/canvas charts
-- Scrollama and/or native IntersectionObserver for scrollytelling
-- compact generated JSON runtime assets for visualization data
+- semantic HTML5
+- modern CSS with custom properties and responsive grid
+- vanilla JavaScript modules
+- D3.js later for custom analytical SVG/canvas figures
+- native IntersectionObserver first; Scrollama only if a later scrollytelling requirement justifies it
+- compact generated JSON runtime assets
 - GitHub Pages deployment
-- no proprietary visual assets or static analytical figure images
+- no framework, backend, database, authentication or CMS
 
 ## Research boundary
 
