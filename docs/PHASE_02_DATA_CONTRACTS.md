@@ -1,64 +1,54 @@
-# Phase 2 — Figure Data Contracts & Publication Extracts
+# Phase 2 — Figure Data Contracts & Publication Runtime Assets
 
-**Status:** COMPLETE — see Phase 2 audit.
+**Status:** IN PROGRESS — corrected public-data policy.
 
 ## Objective
-Convert the frozen Phase 1 figure inventory into auditable publication data contracts without starting chart/UI implementation or creating new scientific analysis.
+Complete auditable analytical lineage for the 21 original research figures and map them into the 17 frozen web-story figures without using PNG/JPG files as numerical sources.
 
-Phase 2 is limited to source-to-figure lineage, figure-level CSV/JSON extracts, deterministic aggregation/downsampling, units/statistic/caveat metadata, machine-readable schemas/hashes, and integrity checks against frozen research outputs.
+## Binding public-data policy
+The authoritative analytical CSV/JSON files in the research Library are build inputs only. They are not to be published as browsable/downloadable CSV files in the public GitHub Pages repository.
 
-## Outputs
-- analytical CSV contracts for FIG-03 through FIG-15, plus a supporting replicated envelope CSV for FIG-09;
-- JSON contracts for FIG-01, FIG-02, FIG-16 and FIG-17;
-- `data/metadata/figures.json` — statistic/source/sample/reduction/caveat metadata for all 17 figures;
-- `data/metadata/figure-contracts.json` — field schemas;
-- `data/metadata/figure-contract-register.csv` — one-row-per-figure contract register;
-- `data/metadata/data-lineage.csv` — publication file to frozen research artifact mapping;
-- `data/metadata/publication-data-manifest.csv` — SHA-256 manifest;
-- `data/metadata/variables.json` and `families.json` — publication terminology;
-- `docs/audits/phase-02-data-integrity-checks.csv` — machine-readable checks.
+The public article will contain:
+- live browser-rendered analytical charts and animations;
+- only the minimum render-ready values needed by each visualization;
+- compact runtime JavaScript/JSON assets generated from the authoritative sources;
+- no user-facing CSV download links;
+- no public `data/figures/*.csv` publication layer.
 
-No web chart code is part of Phase 2.
+Important technical boundary: because GitHub Pages is a static client-side site, any values required for a live chart must ultimately reach the browser and can be inspected by a technically sophisticated user. Therefore this policy protects the authoritative/full research datasets and avoids exposing convenient CSV files, but it is not cryptographic data secrecy. True secrecy would require a private backend/API, which is outside the frozen static-article architecture.
 
-## Publication data reduction
-Full research statistics remain authoritative. Point clouds are reduced only for browser performance.
+## Scientific rules
+- PNG/JPG research figures are visual/caption references only and never numerical evidence.
+- Frozen analytical source files and documented equations/methods remain authoritative.
+- Headline statistics always come from the full authoritative analytical population.
+- Browser display samples/aggregates are deterministic and must not re-estimate or change frozen research claims.
+- Exact relations use exact equations/elasticities; fitted relations use their frozen fit statistics; rank relationships use Spearman rho; Sobol uses S1/ST; family envelopes use p10/p50/p90; alluvial disagreement uses full-overlap statistics and calibrated q10/q50/q90 uncertainty.
 
-- FIG-04: 30×30 analytical grid across the frozen Q/L coverage bounds at the full-sample median C; exact equation, not regression.
-- FIG-05: deterministic family-stratified 900-case display from the original eligible seed; frozen forcing fit remains based on pooled n=10,317.
-- FIG-06: deterministic family-stratified 700-case display; exact material equation remains authoritative.
-- FIG-08: 800-case display retaining **all 101** original nondominated Pareto cases.
-- FIG-09: 900-case family-stratified original-seed point display + pooled replicated family envelopes from n=10,317.
-- FIG-10: pooled replicated family p10/p50/p90 summaries.
-- FIG-11: complete four-seed × four-family share table.
-- FIG-12: 90 Fr1 bins from all 22,500 formal-jump states + frozen F2/F3/F4 core medians.
-- FIG-13/14: deterministic family/regime-stratified 1,200-state display extract from the full 14,369 BJ–DAF overlap.
-- FIG-15: complete released Sobol table (132 rows).
+## Required Phase 2 outputs
+1. 21-original-figure analytical lineage register.
+2. 21 original research figures → 17 web-story figure mapping.
+3. One full contract per web figure specifying upstream source(s), population, filters, method, headline statistics, caveat, and interaction/motion behavior.
+4. Reproducible build script under `scripts/build_phase2_data.py`.
+5. Schema definitions.
+6. Source SHA manifest for authoritative build inputs.
+7. Public runtime-asset manifest for browser assets.
+8. Scientific/data integrity audit.
+9. Repository audit confirming no analytical PNG/JPG or public figure CSV is used as the article data layer.
 
-For FIG-13/14, displayed points are not used to re-estimate headline research statistics. Full-sample annotations are stored in `figures.json`.
+## Runtime publication approach
+The build script generates compact render-ready assets under a runtime directory such as `assets/data/` or `src/data/` using minified JS/JSON modules. These contain only the fields and reduced/aggregated observations required for interaction, hover, animation, filtering, uncertainty bands, surfaces, and linked highlighting.
 
-Display-sample fidelity: median DAF/BJ ≈1.108 vs full ≈1.107; factor-two agreement ≈50.08% vs full ≈50.30%; Spearman ρ≈0.436 vs full ≈0.422.
+Full authoritative CSVs remain outside the public repository.
 
-## Controlled FIG-09 clarification
-Phase 1 allowed a seed filter on the family point cloud. The frozen Library contains the complete original-seed point-level family assignment plus replicated shares/envelopes, but not separate point-level family-assignment CSVs for the three resample seeds.
+## Phase 2 completion gate
+Phase 2 may be marked COMPLETE only when:
+- all 21 original research figures have traceable analytical lineage;
+- all 17 web figures have complete contracts;
+- each public visualization has a render-ready runtime asset;
+- every runtime asset traces to authoritative analytical source/method;
+- no PNG/JPG is used as numerical evidence;
+- no public analytical CSV layer remains;
+- frozen headline statistics reproduce correctly;
+- the final Phase 2 audit passes.
 
-We do not rerun or fabricate research to satisfy a UI control. Therefore:
-- FIG-09 point cloud = seed 49972026 display;
-- FIG-09 envelope = pooled four-seed n=10,317 research envelope;
-- FIG-11 = explicit four-seed replication evidence.
-
-This is a provenance-preserving implementation clarification, not a storyline or scientific change.
-
-## Statistics policy retained
-- exact law → equation + elasticity;
-- fitted law → frozen equation + R²;
-- rank evidence → Spearman ρ;
-- global sensitivity → Sobol S1/ST;
-- families → p10/p50/p90;
-- model comparison → ratios / 1:1 / factor bands;
-- model-disagreement uncertainty → q10/q50/q90 calibration.
-
-## Boundary
-These data are not site validation, real-world failure probabilities, a final optimum section, final IS 4997:2026 basin geometry, final foundation depth, or an instruction to select/average empirical scour equations.
-
-## Phase 3 handoff
-Phase 3 may create only the editorial shell, navigation, branding, responsive framework and empty/live chart containers that consume these contracts. It must not generate new analytical data.
+Do not begin Phase 3 until this gate passes.
