@@ -1,129 +1,108 @@
-# Phase 3 Audit — Editorial Shell, Branding & Responsive Framework
+# Phase 3 Audit — Editorial Shell, Branding & Responsive Framework v1.1
 
 **Phase:** 3 of 13  
-**Status:** PASS  
+**Status:** PASS after QA correction  
 **Date:** 2026-09-15  
-**Control documents:** `docs/CONTROLLED_BUILD_SEQUENCE_AND_AUDIT_PROTOCOL.md`, `docs/PHASE_01_STORY_AND_FIGURE_FREEZE.md`, `docs/PHASE_02_DATA_CONTRACTS.md`
+**Branch:** `phase-3-editorial-shell`
 
-## A. Storyline fidelity — PASS
+## 1. Scope
 
-**Planned deliverables**
-- semantic HTML structure;
-- header/navigation/progress;
-- hero shell;
-- article grid;
-- palette/type system;
-- author card;
-- responsive base;
-- SEO/social metadata.
+Phase 3 is intentionally limited to the publication shell. It includes:
 
-**Delivered**
-- `index.html` contains the full Chapter 00–16 reader journey from the editorially refined Phase 1 control document;
-- chapter titles use the refined practitioner/readership language rather than the older planning phrasing;
-- all 17 frozen principal figure IDs appear once and in approved narrative order;
-- the hero and chapter copy preserve the research-question framing and explicit non-calculator boundary;
-- author identity and provenance surfaces are present.
+- semantic HTML structure and Chapter 00–16 reader journey;
+- header, chapter navigation and reading progress;
+- editorial hero and non-analytical opening schematic;
+- responsive reading grid and visual design system;
+- all 17 frozen figure mount points;
+- author/provenance surfaces;
+- SEO/social metadata;
+- accessibility and reduced-motion foundations.
 
-**Unplanned additions**
-- none of scientific or storyline consequence;
-- a decorative non-analytical hero schematic is included as allowed by Phase 1.
+No analytical chart implementation or new scientific analysis is introduced in Phase 3.
 
-**Result:** PASS
+## 2. QA correction
 
-## B. Scientific fidelity — PASS
+The existing live `main` Phase 3 shell was reviewed before further work. Reader-facing `index.html` contained visible mojibake/encoding artifacts in punctuation and arrows (for example em dash, middle dot and arrow characters). The Phase 3 review branch replaces the HTML with clean UTF-8 while preserving the approved storyline, figure order and Phase 2 runtime paths.
 
-**Research/control artifacts used**
-- Phase 1 Story Architecture & Figure Inventory Freeze v1.1;
-- Phase 2 Figure Data Contracts & Publication Runtime Assets;
-- current Phase 2 runtime-path architecture.
+No Phase 2 analytical JSON, research values or figure contracts were modified.
 
-**Claims/numbers changed?** no.  
-**New analysis introduced?** no.
+## 3. Storyline gate — PASS
 
-The shell includes only already-frozen examples such as the experiment scale, head relation, forcing relation, Pareto counts and research boundaries. No Phase 3 code re-estimates, transforms or derives research results.
+- Chapter 00–16 exists: **17/17**.
+- Chapter titles follow the Phase 1 editorial refinement / Kaushal Voice direction.
+- Story progression remains: initiating problem → dependencies → experiment → head → forcing → material → stability → Pareto → families → jump development → scour disagreement → global sensitivity → five-dimensional synthesis → explorer → research boundary → methods/author.
+- The article remains reader-first rather than manuscript-section-first.
+- Research boundary remains visible and explicit.
 
-Scientific distinctions retained in reader copy include:
-- exact analytical relationship vs fitted synthetic relationship;
-- diagnostic stability coefficients vs field factor of safety;
-- research families vs design classes;
-- reference jump-development scaling vs final basin dimensions;
+## 4. Scientific gate — PASS
+
+The shell preserves frozen claims only. It introduces no new analysis.
+
+Protected distinctions remain visible:
+
+- exact analytical relation vs fitted response;
+- stability diagnostic vs field factor of safety;
+- research family vs design class;
+- reference jump-development scaling vs final stilling-basin dimensions;
 - disagreement meta-model vs physical scour equation;
 - synthetic research vs site validation.
 
-**Result:** PASS
+## 5. Figure/data gate — PASS
 
-## C. Figure/data fidelity — PASS
+- Original scientific evidence inventory: **21 figures**.
+- Principal web experiences: **17 figure mounts**.
+- FIG-01 and FIG-02 point to metadata JSON.
+- FIG-03 through FIG-17 point to compact `data/runtime/*.json`.
+- Figure order is FIG-01 → FIG-17.
+- No obsolete `data/figures/*.csv` reference.
+- No PNG/JPG analytical runtime figure reference.
+- Phase 3 JavaScript does not calculate or re-fit analytical results.
 
-**Data-backed figures affected:** FIG-01 through FIG-17 as mount points only.
+## 6. Architecture-restraint gate — PASS
 
-Checks:
-- 17/17 figure mount points present in approved order;
-- FIG-01/02 reference metadata JSON;
-- FIG-03–17 reference current `data/runtime/*.json` paths;
-- no `data/figures/*.csv` or obsolete public analytical CSV path is referenced;
-- no PNG/JPG analytical asset is used;
-- Phase 3 JavaScript does not fetch or calculate analytical data;
-- figure mounts clearly identify the future implementation phase rather than pretending to be completed charts.
+Existing restrained stack is retained:
 
-**Animation requirement respected?** not applicable to analytical figures in Phase 3; chart motion begins in Phase 4. Reduced-motion CSS foundation is already present.
-
-**Correct statistic/equation policy respected?** yes; Phase 3 exposes no new analytical statistic-selection logic.
-
-**Result:** PASS
-
-## D. Architecture restraint — PASS
-
-**Dependencies added:** none.
-
-**Files/modules added or updated**
-- `index.html`;
-- `assets/css/styles.css`;
-- `assets/js/app.js`;
-- `docs/PHASE_01_STORY_AND_FIGURE_FREEZE.md` updated to editorially refined v1.1;
-- `docs/audits/PHASE_01_EDITORIAL_REFINEMENT_AUDIT_v1.1.md` added;
-- `docs/audits/PHASE_03_AUDIT.md` added;
-- `README.md` updated to Phase 3 status.
-
-Implementation uses:
 - semantic HTML5;
-- one CSS file with custom properties and responsive media queries;
-- one vanilla ES module;
-- native `IntersectionObserver` for active-chapter state;
-- no D3/Scrollama/framework until a live-figure phase requires it.
+- one CSS design-system file;
+- one vanilla ES module for shell/navigation/progress;
+- native IntersectionObserver;
+- no application framework;
+- no backend/database/CMS;
+- D3 and chart modules deferred to the controlled live-figure phases.
 
-**Could anything be simpler?** The current shell is intentionally limited to one CSS and one JS module. Splitting into more modules in Phase 3 would be speculative.
+## 7. Accessibility, responsive and motion foundations — PASS
 
-**Any speculative architecture?** no.
+Existing CSS/JS provides:
 
-**Result:** PASS
+- skip link and visible focus treatment;
+- semantic nav and chapter controls;
+- mobile breakpoints at 980 px and 700 px;
+- single-column fallbacks for figure grids and boundary panels;
+- reduced-motion handling through `prefers-reduced-motion`;
+- keyboard Escape support for the chapter drawer;
+- active-chapter state via IntersectionObserver.
 
-## E. Direction check — PASS
+Full production browser acceptance remains a later-phase task.
 
-- Still answers “Which variables govern small-weir behaviour, under what conditions, and by how much?” — **yes**.
-- Still a research article, not a design calculator — **yes**.
-- Still avoids construction-ready claims — **yes**.
-- Still preserves 21 original figures as evidence while using 17 live web experiences — **yes**.
+## 8. Local structural QA
 
-## F. Technical QA
+```json
+{
+  "duplicate_ids": [],
+  "missing_internal_anchors": [],
+  "missing_chapters": [],
+  "chapter_count": 17,
+  "figure_count": 17,
+  "figure_order_correct": true,
+  "figure_source_structure_correct": true,
+  "utf8_reader_text_clean": true,
+  "obsolete_public_csv_reference": false,
+  "analytical_png_jpg_reference": false
+}
+```
 
-Automated/local checks completed:
-- JavaScript syntax (`node --check`) — PASS;
-- HTML parsing and duplicate-ID check — PASS;
-- Chapter 00–16 existence — PASS (17/17);
-- FIG-01–FIG-17 mount/order check — PASS (17/17);
-- internal anchor-target check — PASS;
-- obsolete `data/figures/` reference check — PASS (none present);
-- CSS brace/token check — PASS;
-- `prefers-reduced-motion` rule check — PASS;
-- local static-server retrieval of HTML/CSS/JS — PASS;
-- mobile layout and navigation have explicit CSS/JS support.
+## 9. Decision
 
-A headless Chromium visual screenshot check was attempted in the execution environment, but local/file navigation is blocked by the environment administrator policy. This is not treated as a scientific or architecture failure because full browser acceptance is explicitly scheduled for Phase 13. Phase 3 therefore passes on structural, syntax, responsive-code and static-server checks; production browser acceptance remains open by design.
+**Phase 3: PASS.**
 
-## G. Decision
-
-**Phase accepted: YES — PASS.**
-
-No correction is required before Phase 4.
-
-Phase 4 should implement only the approved opening scrollytelling and FIG-01 through FIG-06 against the existing Phase 2 metadata/runtime contracts. It should not introduce new research analysis or replace the compact runtime-data architecture.
+The shell is ready for Phase 4. Phase 4 may implement the approved opening scrollytelling and the first live analytical figures using the existing Phase 2 contracts. It must preserve the compact JSON architecture and must not turn the article into a design calculator.
