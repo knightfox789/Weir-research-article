@@ -1,22 +1,9 @@
-stage,seed,category,count,scope
-original_50k_classification,49972026,OUTSIDE_METHOD_APPLICABILITY,31892,all_scenarios
-original_50k_classification,49972026,RESEARCH_LOCKED_SUBSYSTEM,8211,all_scenarios
-original_50k_classification,49972026,RESEARCH_REVIEW_FLAG,5680,all_scenarios
-original_50k_classification,49972026,RESEARCH_IN_DOMAIN,2585,all_scenarios
-original_50k_classification,49972026,INVALID_INPUT_GEOMETRY,1632,all_scenarios
-original_50k_foundation,49972026,COMPETENT_ROCK,25000,all_scenarios
-original_50k_foundation,49972026,NONCOHESIVE_ALLUVIUM,25000,all_scenarios
-replicated_total,49972026,TOTAL_LHS,50000,all_scenarios
-replicated_eligible,49972026,RESEARCH_IN_DOMAIN_COMPETENT_ROCK,2585,eligible_space
-replicated_pareto,49972026,PARETO_NONDOMINATED,101,eligible_space
-replicated_total,49972027,TOTAL_LHS,50000,all_scenarios
-replicated_eligible,49972027,RESEARCH_IN_DOMAIN_COMPETENT_ROCK,2580,eligible_space
-replicated_pareto,49972027,PARETO_NONDOMINATED,130,eligible_space
-replicated_total,49972028,TOTAL_LHS,50000,all_scenarios
-replicated_eligible,49972028,RESEARCH_IN_DOMAIN_COMPETENT_ROCK,2622,eligible_space
-replicated_pareto,49972028,PARETO_NONDOMINATED,124,eligible_space
-replicated_total,49972029,TOTAL_LHS,50000,all_scenarios
-replicated_eligible,49972029,RESEARCH_IN_DOMAIN_COMPETENT_ROCK,2530,eligible_space
-replicated_pareto,49972029,PARETO_NONDOMINATED,131,eligible_space
-replicated_total,0,POOLED_TOTAL_LHS,200000,all_scenarios
-replicated_eligible,0,POOLED_ELIGIBLE,10317,eligible_space
+stage,label,n
+base_50k,Original LHS seed,50000
+four_seed_total,Four independent 50K seeds,200000
+eligible_original,Original eligible family population,2585
+eligible_pooled,Pooled eligible across four seeds,10317
+pareto_original,Original nondominated cases,101
+formal_jump,4.5 <= Fr1 <= 9.0,22500
+alluvial_25k,Alluvial synthetic population,25000
+bj_daf_common,Common BJ-DAF comparison overlap,14369
