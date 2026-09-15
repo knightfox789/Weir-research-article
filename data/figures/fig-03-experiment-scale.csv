@@ -1,9 +1,0 @@
-stage,label,n
-base_50k,Original LHS seed,50000
-four_seed_total,Four independent 50K seeds,200000
-eligible_original,Original eligible family population,2585
-eligible_pooled,Pooled eligible across four seeds,10317
-pareto_original,Original nondominated cases,101
-formal_jump,4.5 <= Fr1 <= 9.0,22500
-alluvial_25k,Alluvial synthetic population,25000
-bj_daf_common,Common BJ-DAF comparison overlap,14369
