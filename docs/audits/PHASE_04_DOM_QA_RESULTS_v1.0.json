@@ -1,0 +1,33 @@
+{
+  "phase": 4,
+  "harness": "node-dom-interaction",
+  "checks_total": 24,
+  "checks_passed": 24,
+  "checks_failed": 0,
+  "checks": [
+    {"name":"fig01_live","pass":true,"detail":""},
+    {"name":"fig01_svg","pass":true,"detail":""},
+    {"name":"fig01_reduced_motion_complete","pass":true,"detail":""},
+    {"name":"fig01_stepper_buttons","pass":true,"detail":"found 5"},
+    {"name":"fig01_stepper_interaction","pass":true,"detail":""},
+    {"name":"fig02_node_count","pass":true,"detail":"found 21"},
+    {"name":"fig02_click_select","pass":true,"detail":""},
+    {"name":"fig02_keyboard_select","pass":true,"detail":""},
+    {"name":"fig02_clear","pass":true,"detail":""},
+    {"name":"fig03_live","pass":true,"detail":""},
+    {"name":"fig03_symbolic_dots","pass":true,"detail":"found 406"},
+    {"name":"fig03_summary","pass":true,"detail":""},
+    {"name":"fig04_three_controls","pass":true,"detail":"found 3"},
+    {"name":"fig04_input_dispatch","pass":true,"detail":""},
+    {"name":"fig04_control_updates_crosshair","pass":true,"detail":"381.00000000000006,48,86,205.49999999999997 -> 381.00000000000006,48,86,48"},
+    {"name":"fig04_crosshair","pass":true,"detail":""},
+    {"name":"fig05_source_points","pass":true,"detail":"found 60"},
+    {"name":"fig05_points_keyboard_focusable","pass":true,"detail":""},
+    {"name":"fig05_range_controls","pass":true,"detail":"found 2"},
+    {"name":"fig05_family_select","pass":true,"detail":""},
+    {"name":"fig05_family_filter_interaction","pass":true,"detail":"found 2"},
+    {"name":"fig06_three_controls","pass":true,"detail":"found 3"},
+    {"name":"fig06_linked_geometry_updates","pass":true,"detail":"M578,350 L578,187.5 L645,187.5 L725,350 Z -> M578,350 L578,130 L645,130 L725,350 Z"},
+    {"name":"fig06_crosshair","pass":true,"detail":""}
+  ]
+}

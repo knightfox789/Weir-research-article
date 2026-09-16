@@ -1,3 +1,5 @@
+import { initPhase4Figures } from './figures.js';
+
 const menuButton = document.querySelector('[data-menu-button]');
 const chapterDrawer = document.querySelector('[data-chapter-drawer]');
 const progressBar = document.querySelector('[data-progress-bar]');
@@ -57,4 +59,4 @@ if ('IntersectionObserver' in window && chapters.length) {
   chapters.forEach((chapter) => observer.observe(chapter));
 }
 
-// Phase 3 stops at shell behaviour. Analytical figure modules begin in Phase 4.
+initPhase4Figures();
