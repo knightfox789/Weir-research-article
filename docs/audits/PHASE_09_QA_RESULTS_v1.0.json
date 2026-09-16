@@ -7,12 +7,12 @@
     "checks_failed": 0
   },
   "dom_interaction_qa": {
-    "checks_total": 40,
-    "checks_passed": 40,
+    "checks_total": 42,
+    "checks_passed": 42,
     "checks_failed": 0
   },
-  "combined_checks_total": 138,
-  "combined_checks_passed": 138,
+  "combined_checks_total": 140,
+  "combined_checks_passed": 140,
   "combined_checks_failed": 0,
   "gates": {
     "storyline": "PASS",
