@@ -2,6 +2,8 @@ import { ensureFigureStyles, loadJson, showFigureError } from './figure-core.js'
 import { renderFig01, renderFig02 } from './figures-01-02.js';
 import { renderFig03, renderFig04 } from './figures-03-04.js';
 import { renderFig05, renderFig06 } from './figures-05-06.js';
+import { renderFig07, renderFig08 } from './figures-07-08.js';
+import { renderFig09, renderFig10, renderFig11 } from './figures-09-11.js';
 
 const RENDERERS = {
   'FIG-01': renderFig01,
@@ -9,7 +11,12 @@ const RENDERERS = {
   'FIG-03': renderFig03,
   'FIG-04': renderFig04,
   'FIG-05': renderFig05,
-  'FIG-06': renderFig06
+  'FIG-06': renderFig06,
+  'FIG-07': renderFig07,
+  'FIG-08': renderFig08,
+  'FIG-09': renderFig09,
+  'FIG-10': renderFig10,
+  'FIG-11': renderFig11
 };
 
 export async function initPhase4Figures() {
