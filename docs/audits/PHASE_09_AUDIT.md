@@ -40,7 +40,8 @@ FIG-17 now provides:
 - visible population/domain/statistic context;
 - direct download of the selected **released runtime JSON asset**, not an upstream source table or newly derived design output;
 - keyboard-focusable evidence rows, mobile layout and reduced-motion support;
-- visible local error state when a required released asset cannot be loaded rather than silently substituting another dataset.
+- visible local error state when a required released asset cannot be loaded rather than silently substituting another dataset;
+- stale evidence cannot be downloaded during an asynchronous evidence-view switch; the active dataset is cleared before the next asset load begins.
 
 ## 3. Scientific and publication controls
 
@@ -64,7 +65,7 @@ No Phase 9 runtime build was required.
 
 The browser derives runtime paths only from the exact allow-listed FIG-17 reuse contract. It never exposes `data/figures/*.csv`, authoritative source tables or hidden raw populations.
 
-The “Download selected released JSON” action serializes the already loaded released asset exactly as published.
+The “Download selected released JSON” action serializes the already loaded released asset content without adding derived fields; it does not claim byte-for-byte preservation of source formatting.
 
 ## 5. Gate assessment
 
@@ -102,10 +103,10 @@ No framework, backend, database, CMS, chart library or large browser dataset is 
 ## 6. QA evidence
 
 - Static/scientific QA — **98/98 PASS**.
-- DOM interaction QA — **40/40 PASS**.
-- Combined controlled QA — **138/138 PASS**.
+- DOM interaction QA — **42/42 PASS**.
+- Combined controlled QA — **140/140 PASS**.
 
-The DOM harness explicitly cycles through all nine contracted explorer views and checks representative variable, family/regime, diagnostic, table/chart, download and error-state interactions.
+The DOM harness explicitly cycles through all nine contracted explorer views and checks representative variable, family/regime, diagnostic, table/chart, download, rapid-switch and error-state interactions.
 
 ## 7. Changed files
 
