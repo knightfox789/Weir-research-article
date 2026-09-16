@@ -149,6 +149,7 @@ export async function renderFig17(mount, contract) {
   async function loadAndRender() {
     const token=++requestToken;
     const meta=VIEW_META[slug];
+    activeData=null;
     ui.canvas.replaceChildren(htmlEl('div','p9-loading',`Loading ${meta.figure} released summary…`));
     dynamicControls.replaceChildren();
     try {
