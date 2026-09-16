@@ -22,6 +22,7 @@ Final production visual/cross-browser/device acceptance remains later-phase scop
 - supports response selection rather than displaying all responses at once;
 - provides `ST`, `S1` and `ST − S1` interaction-contribution views;
 - uses the released 95% S1/ST intervals as whiskers;
+- preserves released slightly negative S1 lower confidence bounds as estimator noise by allowing the S1 axis to extend below zero where required;
 - reorders the three published leading variables for each selected response;
 - keeps the surrogate out-of-fold `R²` in a companion diagnostic panel only, not on the sensitivity-index chart;
 - exposes the independent-scramble maximum `|ΔST|` diagnostic from the frozen replication check;
@@ -94,9 +95,9 @@ The implementation adds one Phase 8 figure module and one small phase-specific s
 
 ## 5. QA evidence
 
-- Static/scientific QA — **86/86 PASS**.
+- Static/scientific QA — **87/87 PASS**.
 - DOM interaction QA — **34/34 PASS**.
-- Combined controlled QA — **120/120 PASS**.
+- Combined controlled QA — **121/121 PASS**.
 
 QA covers manifest hash/size equality, all frozen headline Sobol values, response-group completeness, interval presence, replicate diagnostics, stability exclusion, S1/ST/interaction switching, range-specific wording, no R² misuse, five-dimension identity/order, prior-figure lineage, no composite synthesis score, keyboard-focusable states, reduced-motion completion, invalid-contract rejection, no browser CSV/raster dependency, no FIG-17 renderer and UTF-8 integrity.
 
