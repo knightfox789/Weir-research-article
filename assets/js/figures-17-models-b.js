@@ -78,7 +78,7 @@ function fig15Model(data, state) {
   const rep = data.replication_check.find(d => d.response === state.response);
   const oof = data.indices.find(d => d.response === state.response)?.surrogate_oof_r2;
   return {
-    statistic: `${SOBOL_RESPONSES[state.response] || state.response} · ${state.mode === 'gap' ? 'ST − S1 interaction contribution' : state.mode}`,
+    statistic: `${SOBOL_RESPONSES[state.response] || state.response} · ${state.mode === 'interaction_gap_ST_minus_S1' ? 'ST − S1 interaction contribution' : state.mode}`,
     rows,
     cards: [
       ['Sobol base N', fmt(data.design.base_N,0)],
