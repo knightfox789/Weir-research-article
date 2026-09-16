@@ -5,6 +5,8 @@ import { renderFig05, renderFig06 } from './figures-05-06.js';
 import { renderFig07, renderFig08 } from './figures-07-08.js';
 import { renderFig09, renderFig10, renderFig11 } from './figures-09-11.js';
 import { renderFig12, initFoundationTransition } from './figures-12.js';
+import { renderFig13, renderFig14 } from './figures-13-14.js';
+
 
 function ensurePhase5Styles() {
   if (document.querySelector('link[data-phase5-figures]')) return;
@@ -15,12 +17,23 @@ function ensurePhase5Styles() {
   document.head.append(link);
 }
 
+
 function ensurePhase6Styles() {
   if (document.querySelector('link[data-phase6-figures]')) return;
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = 'assets/css/figures-phase6.css';
   link.dataset.phase6Figures = 'true';
+  document.head.append(link);
+}
+
+
+function ensurePhase7Styles() {
+  if (document.querySelector('link[data-phase7-figures]')) return;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'assets/css/figures-phase7.css';
+  link.dataset.phase7Figures = 'true';
   document.head.append(link);
 }
 
@@ -36,13 +49,16 @@ const RENDERERS = {
   'FIG-09': renderFig09,
   'FIG-10': renderFig10,
   'FIG-11': renderFig11,
-  'FIG-12': renderFig12
+  'FIG-12': renderFig12,
+  'FIG-13': renderFig13,
+  'FIG-14': renderFig14
 };
 
 export async function initPhase4Figures() {
   ensureFigureStyles();
   ensurePhase5Styles();
   ensurePhase6Styles();
+  ensurePhase7Styles();
   initFoundationTransition();
   const mounts = [...document.querySelectorAll('[data-figure]')].filter((mount) => RENDERERS[mount.dataset.figure]);
   await Promise.all(mounts.map(async (mount) => {
