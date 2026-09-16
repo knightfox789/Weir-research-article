@@ -1,0 +1,29 @@
+{
+  "phase": 6,
+  "status": "PASS",
+  "static_scientific_qa": {
+    "checks_total": 59,
+    "checks_passed": 59,
+    "checks_failed": 0
+  },
+  "dom_interaction_qa": {
+    "checks_total": 20,
+    "checks_passed": 20,
+    "checks_failed": 0
+  },
+  "combined_checks_total": 79,
+  "combined_checks_passed": 79,
+  "combined_checks_failed": 0,
+  "gates": {
+    "storyline": "PASS",
+    "scientific": "PASS",
+    "figure_data": "PASS",
+    "architecture_restraint": "PASS"
+  },
+  "runtime_contract": "UNCHANGED_FIG_12",
+  "phase_boundary": "Phase 6 implements FIG-12 and a rock/foundation explanatory transition only. FIG-13 and FIG-14 remain deferred to Phase 7.",
+  "native_headless_browser": {
+    "status": "ENVIRONMENT_UNAVAILABLE_CARRIED_FORWARD",
+    "detail": "The Chromium limitation recorded in Phase 4 remains; deterministic scientific/static and DOM interaction QA are used here, while final production visual/cross-browser/device acceptance remains later-phase scope."
+  }
+}
