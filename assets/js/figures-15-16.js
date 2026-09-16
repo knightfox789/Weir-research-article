@@ -48,7 +48,8 @@ function chartDomain(rows, mode) {
     return [lo, hi];
   }
   const hi = Math.max(...rows.map(d => Number(d[MODES[mode].hi] ?? d[MODES[mode].field]))) * 1.08;
-  return [0, Math.max(0.1, hi)];
+  const lo = mode === 'S1' ? Math.min(0, ...rows.map(d => Number(d.S1_lo95))) * 1.08 : 0;
+  return [lo, Math.max(0.1, hi)];
 }
 
 function tickValues([lo, hi], mode) {
