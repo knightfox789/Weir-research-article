@@ -5,6 +5,15 @@ import { renderFig05, renderFig06 } from './figures-05-06.js';
 import { renderFig07, renderFig08 } from './figures-07-08.js';
 import { renderFig09, renderFig10, renderFig11 } from './figures-09-11.js';
 
+function ensurePhase5Styles() {
+  if (document.querySelector('link[data-phase5-figures]')) return;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'assets/css/figures-phase5.css';
+  link.dataset.phase5Figures = 'true';
+  document.head.append(link);
+}
+
 const RENDERERS = {
   'FIG-01': renderFig01,
   'FIG-02': renderFig02,
@@ -21,6 +30,7 @@ const RENDERERS = {
 
 export async function initPhase4Figures() {
   ensureFigureStyles();
+  ensurePhase5Styles();
   const mounts = [...document.querySelectorAll('[data-figure]')].filter((mount) => RENDERERS[mount.dataset.figure]);
   await Promise.all(mounts.map(async (mount) => {
     try {
