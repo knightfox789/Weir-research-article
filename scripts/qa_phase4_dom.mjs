@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { pathToFileURL, fileURLToPath } from 'node:url';
 
 class ClassList {
   constructor(el){ this.el=el; this.set=new Set(); }
@@ -51,7 +51,7 @@ globalThis.document={
 
 globalThis.console = console;
 
-const ROOT=path.resolve('/mnt/data/weir_phase4_repo');
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const j=(rel)=>JSON.parse(fs.readFileSync(path.join(ROOT,rel),'utf8'));
 const m01=await import(pathToFileURL(path.join(ROOT,'assets/js/figures-01-02.js')));
 const m03=await import(pathToFileURL(path.join(ROOT,'assets/js/figures-03-04.js')));
@@ -90,14 +90,12 @@ function findByAttr(root,key,prefix){ return root.querySelectorAll('[role="butto
  const el=mount(); m03.renderFig03(el,j('data/runtime/fig-03-experiment-scale.json'));
  check('fig03_live',el.classList.contains('is-live'));
  check('fig03_symbolic_dots',el.querySelectorAll('circle').length>=400,`found ${el.querySelectorAll('circle').length}`);
- check('fig03_summary',el.textContent.includes('Synthetic coverage design') || el.innerHTML.includes('Synthetic coverage design') || true);
+ check('fig03_summary',el.querySelector('.p4-figure__summary')?.textContent.includes('synthetic study domain') === true);
 }
 // FIG-04 controls update analytical state.
 {
  const el=mount(); m03.renderFig04(el,j('data/runtime/fig-04-head-response.json'));
  const inputs=el.querySelectorAll('input'); check('fig04_three_controls',inputs.length===3,`found ${inputs.length}`);
- const summaries=()=>el.children.flatMap(()=>[]); // no-op, state checked by output text holder
- const before=el.textContent;
  const cross0=el.querySelectorAll('.p4-crosshair').map(n=>[n.getAttribute('x1'),n.getAttribute('y1')].join(','));
  const d4=j('data/runtime/fig-04-head-response.json');
  if(inputs[0]){ inputs[0].value=String(d4.ranges.Q_m3s[1]); inputs[0].dispatchEvent({type:'input'}); }
